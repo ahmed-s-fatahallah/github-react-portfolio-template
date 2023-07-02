@@ -34,7 +34,7 @@ Add your GitHub username once and all of your info will automatically be updated
 
    ```javascript
    /* START HERE
-   ************************************************************** 
+   **************************************************************
      Add your GitHub username (string - "YourUsername") below.
    */
    export const githubUsername = "Your GitHub username here";
@@ -54,7 +54,7 @@ Add your GitHub username once and all of your info will automatically be updated
 
    ```javascript
    /* Projects
-   ************************************************************** 
+   **************************************************************
      List the repo names (string - "your-repo-name") you want to include (they will be sorted alphabetically). If empty, only the first 3 will be included.
    */
    export const filteredProjects = ["example-1", "example-2", "example-3"];
@@ -87,7 +87,7 @@ Add your GitHub username once and all of your info will automatically be updated
 
    ```javascript
    /* Contact Info
-   ************************************************************** 
+   **************************************************************
      Add your formspree endpoint below.
      https://formspree.io/
    */

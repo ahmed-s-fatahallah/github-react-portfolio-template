@@ -2,11 +2,14 @@ import styled from "styled-components";
 import { useSelector } from "react-redux";
 import { selectData } from "../pages/homeSlice";
 import { Element } from "react-scroll";
+import { useAppContext } from "../appContext";
 // Data
-import { moreInfo } from "../data";
+import { moreInfo, resume } from "../data";
+
 // Components
 import { Col, Container, Row } from "react-bootstrap";
 import { Title } from "./globalStyledComponents";
+import { Button } from "react-bootstrap";
 
 const StyledAboutMe = styled.section`
   p {
@@ -19,6 +22,7 @@ const StyledAboutMe = styled.section`
 `;
 
 export default function AboutMe() {
+  const { theme } = useAppContext();
   const { avatar_url, bio } = useSelector(selectData);
 
   return (
@@ -49,6 +53,17 @@ export default function AboutMe() {
             </Col>
           </Row>
         </Container>
+        {resume && (
+          <a href={resume}>
+            <Button
+              size="lg"
+              variant={theme === "light" ? "outline-dark" : "outline-light"}
+              className="mt-5"
+            >
+              R&eacute;sum&eacute;
+            </Button>
+          </a>
+        )}
       </StyledAboutMe>
     </Element>
   );

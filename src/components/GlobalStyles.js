@@ -34,10 +34,10 @@ a:hover {
 
 .navbar {
   border-bottom: var(--border);
+  
 
   img {
-    background: ${({ theme }) =>
-      theme.name === "light" ? "#45413C" : "#797B7B"};
+    background: ${({ theme }) => (theme.name === "light" ? "#fff" : "#fff")};
   }
 }
 
@@ -94,6 +94,12 @@ a:hover {
  @media screen and (min-width: 1367px) {
   .link-icons:hover {
     color: var(--primary);
+  }
+  }
+
+  @media screen and (max-width: 991px) {
+    .navbar-nav{
+    margin-bottom: 1rem;
   }
   }
 `;

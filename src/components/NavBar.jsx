@@ -3,13 +3,14 @@ import { useAppContext } from "../appContext";
 import { Link as ScrollLink } from "react-scroll";
 import { Link, useLocation } from "react-router-dom";
 import styled from "styled-components";
+import { resume } from "./../data";
 // Icons
 import { Icon } from "@iconify/react";
 // Components
-import { Container, Nav, Navbar } from "react-bootstrap";
+import { Container, Nav, Navbar, Button } from "react-bootstrap";
 // import { FixedNavSpacer, ToggleSwitch } from "./globalStyledComponents";
 // Images
-import Logo from "../images/logo.svg";
+import Logo from "../images/2005585.png";
 
 const navLinks = {
   routes: [
@@ -100,11 +101,11 @@ export default function NavBar() {
         <Container>
           <Navbar.Brand>
             <img
-              alt="React Logo"
+              alt="A Logo"
               src={Logo}
               width="35"
               height="35"
-              className="rounded-circle"
+              className="rounded"
             />
           </Navbar.Brand>
           <Navbar.Toggle
@@ -146,6 +147,18 @@ export default function NavBar() {
                       </Nav.Item>
                     );
                   })}
+              {resume && (
+                <a href={resume}>
+                  <Button
+                    size="md"
+                    variant={
+                      theme === "light" ? "outline-dark" : "outline-light"
+                    }
+                  >
+                    R&eacute;sum&eacute;
+                  </Button>
+                </a>
+              )}
             </Nav>
             <Nav>
               <ThemeToggle />

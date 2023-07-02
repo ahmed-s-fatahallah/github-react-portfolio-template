@@ -9,16 +9,17 @@ import { Card } from "react-bootstrap";
 
 const StyledCardComponent = styled.div`
   .card {
-    background: ${({ theme }) => (theme.name === "light" ? "" : "#797B7B")};
+    background: ${({ theme }) => (theme.name === "light" ? "" : "#fff")};
     box-shadow: ${({ theme }) =>
       theme.name === "light"
         ? "0 3px 10px rgb(0 0 0 / 0.2)"
         : "0 3px 10px rgb(255 255 255 / 0.2)"};
+    color: ${"#000"};
 
     .card-link {
       text-decoration: none;
       font-size: 1.5rem;
-      color: ${({ theme }) => theme.color};
+      color: ${"#000"};
 
       &:hover {
         color: var(--primary);
